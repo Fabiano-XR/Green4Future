@@ -1,0 +1,292 @@
+/*Padrão de tudo do site*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*define exatamente o tamanho q eu por*/
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+body { /*fundo*/
+    background: linear-gradient(to right, #013f4a, #27e9b5);
+    height: 100vh;
+
+    overflow-x: hidden;
+
+    opacity: 0;
+
+    transition: opacity 1s ease;
+}
+
+/* Topo do site */
+header {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+}
+
+nav { /*Aba de navegação para os outros sites*/
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 { /*Nome do site*/
+    color: #27e9b5;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 80px;
+
+    transition: 0.3s;
+}
+
+nav h1:hover{
+
+    transform: scale(1.05);
+
+}
+
+nav ul { /*organizar os links*/
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a { /*estilo dos links*/
+    text-decoration: none;
+    color: #051824;
+    font-weight: bold;
+    transition: 0.3s; /*em vez de piscar faz animação leve*/
+}
+
+nav a:hover { /*quando o mouse ta em cima*/
+    opacity: 0.7; /*fica um pouco mais claro*/
+    font-size: large; /*fica maior*/
+
+    color: #ffffff;
+}
+
+.nos_interior{
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 40px 20px;
+
+}
+
+.nos_interior h1{
+
+    font-style: italic;
+    color: #20ac5d;
+    font-size: 52px;
+    margin: 5px 10px;
+
+    animation: fadeIn 1s ease;
+
+}
+
+.nos_interior p{
+
+    color: #ffffff;
+    margin: 0px 20px;
+
+    line-height: 1.8;
+
+    font-size: 18px;
+
+    animation: fadeIn 1.5s ease;
+
+}
+
+/*Rodape*/
+.main_footer { /*Rodape em si*/
+    background: linear-gradient(to right,#051824, #013f4a);
+    color: whitesmoke;
+    padding: 40px 20px 20px 20px;
+    margin-top: 80px;
+    opacity: 80%;
+
+    backdrop-filter: blur(5px);
+}
+
+.footer_content { /*Conteudo do rodape*/
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer_info h4 { /*Titulo Green4Future*/
+    color: #27e9b5;
+    font-size: 24px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.footer_info p, .footer_contact p { /*texto do info e do contato*/
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 5px;
+}
+
+.footer_contact h5, .footer_links h5 { /*Titulo contato e links*/
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #27e9b5;
+    align-items: center;
+}
+
+.footer_links ul { /*Links*/
+    list-style: none;
+    padding: 0;
+}
+
+.footer_links a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer_links a:hover {
+    color: #27e9b5;
+
+    padding-left: 5px;
+}
+
+.footer_bottom { /*Parte inferior do rodape*/
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* animação */
+
+.animar{
+
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition: 1s;
+
+}
+
+.animar.ativo{
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+/* cursor */
+
+.cursor{
+
+    width: 20px;
+
+    height: 20px;
+
+    background: #27e9b5;
+
+    border-radius: 50%;
+
+    position: fixed;
+
+    pointer-events: none;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 9999;
+
+    box-shadow: 0 0 20px #27e9b5;
+
+}
+
+/* dark mode */
+
+.dark{
+
+    background: linear-gradient(to right, #000000, #1b1b1b);
+
+}
+
+.dark .main_footer{
+
+    background: rgba(255,255,255,0.08);
+
+}
+
+/* fade in */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to{
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* responsivo */
+
+@media(max-width: 768px){
+
+    nav{
+
+        flex-direction: column;
+
+        gap: 20px;
+
+    }
+
+    nav ul{
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+    .nos_interior h1{
+
+        font-size: 36px;
+
+        text-align: center;
+
+    }
+
+    .nos_interior p{
+
+        font-size: 16px;
+
+    }
+
+    .footer_content{
+
+        flex-direction: column;
+
+    }
+
+}
