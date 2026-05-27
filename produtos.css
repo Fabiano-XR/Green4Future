@@ -1,0 +1,428 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* BODY */
+body {
+    background: #ffffff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+nav {
+     width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 32px;
+    color:#051824;
+
+}
+
+nav h6 {
+    display: block;
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 90px;
+    letter-spacing: -4px;
+    margin-top: 30px;
+    background: linear-gradient(to right,#20ac5d,#051824);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 3px solid #20ac5d;
+    display: inline-block;
+    border-image: linear-gradient(to right, #20ac5d 50%, transparent 50%) 1;
+    margin-left: 800    px;
+    margin-bottom: 9px;
+    padding-left: 45px;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav a {
+    text-decoration: none;
+    color: #051824;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    margin-top: 10px;
+    color: #051824;
+    background:white;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #20ac5d;
+    padding: 10px;
+
+}
+
+.hero h2 {
+    font-size: 36px;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-weight: 800;     
+}
+
+.hero p {
+    margin-top: 0px;
+    font-size: 18px;
+    
+}
+/* AJUSTE DA SEÇÃO FINAL */
+.container {
+    text-align: center; /* Centraliza o título e o conteúdo */
+    padding: 60px 20px;
+    padding-bottom: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Garante que o formulário fique bem centralizado */
+}
+
+.container h3 {
+    color: #051824;
+    font-size: 30px;
+    margin-bottom: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: bold;
+}
+
+
+/* Seleciona diretamente a tag form dentro do container */
+.container form {
+    width: 100%;
+    max-width: 400px; /* Define uma largura máxima elegante para o formulário */
+    padding: 30px;
+    display: flex;
+    flex-direction: column; /* Empilha os elementos um embaixo do outro */
+    gap: 15px; /* Cria um espaçamento igual entre cada campo */
+    }
+/* Estilo dos campos de texto */
+.container form input[type="email"],
+.container form input[type="tel"],
+.container form input[type="text"] 
+{
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 80px;
+    background: linear-gradient(to right,#2b9e5d,#091f2d);
+    opacity: 80%;
+    border-bottom: #013f4a;
+    text-align: center;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.container form input::placeholder {
+    color: white; /* Ou a cor que você desejar colocar aqui */
+    opacity: 1; /* Garante que o navegador não mude a opacidade da cor */
+}
+/* Container do Checkbox para alinhar horizontalmente a caixinha e o texto */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #000000;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Botão de Enviar */
+.container form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 50px;
+    background: #013f4a;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.container form button:hover {
+    opacity: 0.8;
+    transform: scale(1.02); /* Um leve efeito de zoom ao passar o mouse */
+} 
+/* FORMULÃRIO (canto inferior esquerdo) */
+/* .form-container {
+    position: fixed;
+    margin-left: 100px;
+    bottom: 75px;
+    width: 280px;
+    padding: 20px;
+    border-radius: 50px;
+    background: linear-gradient(to right, #7cb896,rgba(90,144,112,.12));
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.form-container h3 {
+    text-align: center;
+    margin-bottom: 5px;
+    color: white
+}
+
+/* /* INPUTS /*
+/* form input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 80px;
+    background: whitesmoke;
+    text-align: center;
+    font-weight: bold;
+}
+ */
+/* BOTÃO
+    form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    background: green;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight:bold;
+    margin: 10px 0;
+}
+
+form button:hover {
+    opacity: 0.8;
+}
+
+/* IMAGEM BLOG (canto inferior direito) /*
+/* blog-image h4 {
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: green;
+}
+.blog-image {
+    position: fixed;
+    bottom: 30px;
+    right: 100px;
+}
+
+.blog-image img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+ */
+/* nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+ /* test */
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    background-image: url(Loogo.png);
+    
+    /* 1. Mude de 'cover' para 'contain' ou 'auto' */
+    background-size: contain; /* 'contain' faz o logo caber na tela sem cortar */
+    /* Ou use um tamanho fixo, ex: background-size: 300px; */
+
+    /* 2. Garante que não vai repetir o logo como um papel de parede */
+    background-repeat: no-repeat; 
+    
+    /* 3. Mantém centralizado */
+    background-position: center; 
+
+    background-attachment: fixed;
+    opacity: 0.3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    
+    /* Opcional: Adiciona um leve desfoque para destacar o conteúdo */
+    /* filter: blur(5px); */
+}
+.logo-site {
+    height: 60px; /* Ajuste essa altura conforme o tamanho da sua barra */
+    width: auto;  /* Isso mantém a proporção sem distorcer o logo */
+    display: block;
+}
+
+/* Caso precise alinhar verticalmente com os links "Quem Somos" e "Contato" */
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+/* CONTAINER PRINCIPAL DO BANNER */
+.banner-container {
+    width: 95%;
+    max-width: 2000px;
+    height: 300px;
+    margin: 10px auto; /* Espaço entre o 'Bem-vindo' e o banner */
+    overflow: hidden; /* Esconde as imagens que estão 'na fila' */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 10;
+}
+
+/* TRILHO QUE MOVE OS SLIDES */
+.banner-slides {
+    display: flex;
+    width: 300%; /* 100% para cada uma das 3 imagens */
+    height: 100%;
+    /* Animação: nome | duração | repetição | suavidade */
+    animation: rotateBanner 15s infinite ease-in-out;
+}
+
+/* CADA SLIDE INDIVIDUAL */
+.slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o banner sem deformar */
+}
+
+/* LEGENDA SOBRE A IMAGEM */
+.caption {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    background: linear-gradient(to right,#013f4a, #27e9b5); /* Verde Green4Future translúcido */
+    color:whitesmoke;
+    padding: 12px 25px;
+    border-radius: 80px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* LÓGICA DA ANIMAÇÃO (PARA 3 IMAGENS) */
+@keyframes rotateBanner {
+    0%, 28% { transform: translateX(0); }             /* Imagem 1 parada */
+    33%, 61% { transform: translateX(-33.33%); }      /* Imagem 2 parada */
+    66%, 94% { transform: translateX(-66.66%); }      /* Imagem 3 parada */
+    100% { transform: translateX(0); }                /* Volta suave para a 1 */
+}
+
+/* PAUSA A ANIMAÇÃO QUANDO O MOUSE ESTIVER EM CIMA (OPCIONAL) */
+.banner-container:hover .banner-slides {
+    animation-play-state: paused;
+}
+/* RODAPÉ PRINCIPAL */
+.main-footer {
+    background: linear-gradient(to right,#051824, #013f4a); /* Tons escuros para contraste */
+    color: whitesmoke;
+    padding: 40px 20px 20px 20px;
+    margin-top: 80px;
+    font-family: system-ui, -apple-system, sans-serif;
+    opacity: 80%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; /* Garante que fique bom no celular */
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-info h4 {
+    color: #27e9b5; /* O verde que você usa no h1 */
+    font-size: 24px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.footer-info p, .footer-contact p {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 5px;
+}
+
+.footer-contact h5, .footer-links h5 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #27e9b5;
+    align-items: center;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #27e9b5;
+}
+
+/* LINHA FINAL */
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 12px;
+    opacity: 0.7;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
