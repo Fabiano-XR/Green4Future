@@ -1,0 +1,272 @@
+/*Padrão de tudo do site*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*define exatamente o tamanho q eu por*/
+    font-family: system-ui, -apple-system, sans-serif;
+}
+body { /*fundo*/
+    /* background: linear-gradient(to right, #013f4a, #27e9b5); */
+    background: #ffffff;
+    height: 100vh;
+}
+/* Topo do site */
+header {
+    width: 100%;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+nav { /*Aba de navegação para os outros sites*/
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*nav h1 { Nome do site
+     color: #27e9b5;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 80px;
+}*/
+nav ul { /*organizar os links*/
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+nav a { /*estilo dos links*/
+    text-decoration: none;
+    color: #012438;
+    font-weight: bold;
+    /* padding-bottom: 8px; */
+    transition: 0.3s; /*em vez de piscar faz animação leve*/
+}
+nav a:hover { /*quando o mouse ta em cima*/
+    opacity: 0.7; /*fica um pouco mais claro*/
+    font-size: large; /*fica maior*/
+    color: #20ac5d;
+}
+/* Faixa superior do site */
+.faixa_top {
+    text-align: center;
+    margin-top: 10px;
+    /* color: whitesmoke;
+    background: linear-gradient(to right, #27e9b5, #013f4a); */
+    background: linear-gradient(to right, #20ac5d, #051824);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 3px solid #20ac5d;
+    /* display: inline-block; */
+    border-image: linear-gradient(to right, #20ac5d 50%, transparent 80%) 1;
+    padding: 10px;
+}
+.faixa_top h2 {
+    /* font-size: 36px; */
+    /* font-weight: bold; */
+    font-weight: 800;
+    letter-spacing: -4px;
+    font-style: italic; 
+    color: #012438; 
+    font-size: 60px; 
+    margin: 0; padding: 0; 
+    line-height: 1; 
+    /* padding-left: 80px; */
+    align-self: center;
+}
+.faixa_top p {
+    font-size: 18px;
+    /* font-weight: 800; */
+    /* letter-spacing: -4px; */
+    /* font-style: italic; */ 
+    color: #012438; 
+    /* font-size: 60px; */ 
+    /* margin: 0; padding: 0; */ 
+    /* line-height: 1; */ 
+    /* padding-left: 80px; */
+}
+/* Conteudo do site */
+main {
+    display: flex;
+    flex-direction: row;
+}
+section{
+    width: 50%;
+    padding-left: 15px;
+    height: 65vh;
+}
+
+section h1{
+    font-style: italic;
+    font-size: 35px;
+    margin: 10px 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #012438;
+}
+.texto{
+  color: #051824;
+  margin: 0px 20px;
+  background: linear-gradient(to right, #20ac5d, #051824);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 3px solid #20ac5d;
+    display: inline-block;
+    border-image: linear-gradient(to right, #20ac5d 50%, transparent 50%) 1;
+}
+/* fazendo uma linha entre as section */
+.contato{position: relative;} /* seu lugar relativo a esse elemento*/
+.contato::after{
+    content: "";
+    position: absolute; /* seu lugar apartir do elemento relativo */
+    right: 0; /* a direita da section */
+    top: 10%; /* começa em 10% de cima pra baixo */
+    bottom: 0%; /* começa em 10% de baixo pra cima */
+    width: 1px;  /* espessura dele da esquerda pra direita */
+    background-color: #4ee95a;
+}
+
+.contato_div{ display: flex; align-items: center; margin: 10px 0px; } /* deixar os texto ao lado dos icones */
+
+.icon{ /* tamanho e cor dos icones */
+    width: 20px; 
+    height: 20px;
+} 
+
+.org_maps{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+.org_maps p{
+    margin: 0px;
+    width: 100%;
+}
+.texto_iframe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+.texto_iframe p{ /*Texto e borda do Google Maps */
+    color: #051824;
+    border-left: 2px solid #38a868;
+    border-right: 2px solid #38a868;
+    border-top: 2px solid #38a868;
+    text-align: center;
+    width: 70%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: rgba(255, 255, 255, 0.08);
+    border-width: 3px;
+}
+iframe{
+    width: 70%;
+    height: 150px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-color: #38a868;
+    border-width: 3px;
+}
+
+/* formulario */
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   height: 95%;
+}
+form div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+input, textarea{
+    margin: 0px 20px;
+    background: transparent;
+    /* color: white; */
+    border-style: solid;
+    border-radius: 4px;
+    outline: none; /* tira a borda feia quando clica nele */
+    /* border-color: #f0f0f0; */
+    border-width: 1px;
+    padding: 5px 10px;
+}  
+/* input::placeholder, textarea::placeholder{
+    color: rgba(255, 255, 255, 0.822);
+} */
+
+textarea{
+    resize: none; /* não deixa mexerem no tamanho da area de mensagem */
+    height: 20vh;
+}
+button{
+    margin: 5px;
+    align-self: center;
+    width: 90%;
+    height: 40px;
+    box-shadow: 3px 5px 10px #000000c9;
+    background: #23d3a4;
+    /* color: white; */
+    border-style: none;
+    border-radius: 7px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+    /*Rodape*/
+.main_footer { /*Rodape em si*/
+    background: linear-gradient(to right, #07132c, #38a868);
+    color: #ffffff;
+    padding: 40px 20px 20px 20px;
+    margin-top: 80px;
+    opacity: 100%;
+}
+.footer_content { /*Conteudo do rodape*/
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+.footer_info h4 { /*Titulo Green4Future*/
+    color: #27e9b5; 
+    font-size: 24px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.footer_info p, .footer_contact p { /*texto do info e do contato*/
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 5px;
+}
+.footer_contact h5, .footer_links h5 { /*Titulo contato e links*/
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #27e9b5;
+    align-items: center;
+}
+.footer_links ul { /*Links*/
+    list-style: none;
+    padding: 0;
+}
+.footer_links a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.footer_links a:hover {
+    color: #27e9b5;
+}
+.footer_bottom { /*Parte inferior do rodape*/
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #012438;
+    font-size: 12px;
+    opacity: 0.7;
+}

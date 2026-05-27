@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*define exatamente o tamanho q eu por*/
+    font-family: system-ui, -apple-system, sans-serif;
+}
+body { /*fundo*/
+    background: #ffffff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Topo do site */
+header {
+    width: 100%;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.titulo1{
+    letter-spacing: -4px;
+    font-weight: 800;
+}
+
+.titulo2{
+    display: inline-block;
+    font-size: 100px;
+    font-weight: 800;
+    margin-left: 80px;
+    line-height: 90px;
+    background: linear-gradient(to right, #20ac5d, #051824);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    padding-bottom: 0;
+    margin-bottom: 50px;
+}
+
+.titulo2::after{
+    content: "";
+    position: absolute;
+    left: 25%; /*A penca da barra embaixo do Historia*/
+    bottom: 0;
+    width: 50%;
+    height: 4px;
+    background: #20ac5d;
+    border-radius: 15px;
+}
+
+nav { /*Aba de navegação para os outros sites*/
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1{
+    color: #051824;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+nav ul { /*organizar os links*/
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+nav a { /*estilo dos links*/
+    text-decoration: none;
+    color: #012438;
+    font-weight: bold;
+    transition: 0.3s; /*em vez de piscar faz animação leve*/
+        text-decoration: none;
+    padding-bottom: 8px;
+}
+
+nav a:hover { /*quando o mouse ta em cima*/
+    opacity: 0.7; /*fica um pouco mais claro*/
+    font-size: large; /*fica maior*/
+    color: #20ac5d;
+}
+
+.sobre{
+    color:#27e9b5;
+    font-size:20px;
+    font-weight:bold;
+    width:130px;
+    padding-bottom:8px;
+    margin-bottom:20px;
+    border-bottom:3px solid #27e9b5;
+}
+
+.nos_interior h1{ /*Nossa*/ 
+    font-style: italic; 
+    color: #012438; 
+    font-size: 60px; 
+    margin: 0; padding: 0; 
+    line-height: 1; 
+    padding-left: 80px;
+}
+
+.nos_interior p{
+  color: #060a08;
+    margin: 0px 20px;
+}
+
+main{
+    flex: 1;
+}
+
+/*Rodape*/
+.main_footer { /*Rodape em si*/
+    background: linear-gradient(to right, #07132c, #38a868);
+    padding: 40px 20px 20px 20px;
+    margin-top: auto;
+    opacity: 100%;
+}
+
+.footer_content { /*Conteudo do rodape*/
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer_info h4 { /*Titulo Green4Future*/
+    color: #27e9b5; 
+    font-size: 24px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.footer_info p, .footer_contact p { /*texto do info e do contato*/
+    font-size: 14px;
+    color: #ffffff;
+    opacity: 0.9;
+    margin-bottom: 5px;
+}
+.footer_contact h5, .footer_links h5 { /*Titulo contato e links*/
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #27e9b5;
+    align-items: center;
+}
+.footer_links ul { /*Links*/
+    list-style: none;
+    padding: 0;
+}
+.footer_links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.footer_links a:hover {
+    color: #27e9b5;
+}
+.footer_bottom { /*Parte inferior do rodape*/
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #012438;
+    font-size: 12px;
+    opacity: 0.7;
+    color: white;
+}
+
+
+/* Seção valores */
+.valores{
+    padding: 40px 80px 80px;
+    background: linear-gradient(to right, #ffffff,#f5fffa);
+    font-family: Georgia;
+}
+
+/* Missoes e valores */
+.valores h2{
+    font-size: 20px;
+    color:#051824;
+    font-weight: 800;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Área dos cards */
+.cards{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.card1,
+.card2,
+.card3{
+    background: rgba(255,255,255,0.75);
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    margin: 0 auto; 
+    transition: 0.3s;
+    padding-right: 180px;
+    max-width: 1500px;
+    min-height: 180px;
+    padding: 13px;
+}
+
+/* Hover */
+.card1:hover,
+.card2:hover,
+.card3:hover{
+    transform: translateY(-5px);
+}
+
+/* Títulos dos cards */
+.card1 h3,
+.card2 h3,
+.card3 h3{
+    color: #20ac5d;
+    font-size: 24px;
+    margin-bottom: 18px;
+    font-weight: 800;
+}
+
+/* Texto */
+.card1 p,
+.card2 p,
+.card3 p{
+    color: #1e293b;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Imagem decorativa */
+.card1{
+    background-image: url("https://cdn.discordapp.com/attachments/1501308869933273181/1508997717735772231/28_Sem_Titulo_20260526215803.png?ex=6a179323&is=6a1641a3&hm=6484a4b088cca616a95de69b5a9eb807c757538c2eaa6d370462318033d403eb");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 110px;
+    padding-right: 220px;
+}
+
+.card2{
+    background-image: url("https://media.discordapp.net/attachments/1501308869933273181/1509007842466595057/28_Sem_Titulo_20260526223814.png?ex=6a179c91&is=6a164b11&hm=15964ed5aa5e60cb987888e565e0fc778636ac6851ae21fea3430989bc8de0dd&=&format=webp&quality=lossless");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 110px;
+    padding-right: 220px;
+}
+
+.card3{
+    background-image: url("https://media.discordapp.net/attachments/1501308869933273181/1509007848754122752/28_Sem_Titulo_20260526223719.png?ex=6a179c93&is=6a164b13&hm=f9ebaa9da8b0d2e166d645e5be914ec27365902941e8e8d7caea5e5efde45a64&=&format=webp&quality=lossless");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 170px;
+    padding-right: 220px;
+}
