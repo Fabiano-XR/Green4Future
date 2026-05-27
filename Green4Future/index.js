@@ -1,4 +1,6 @@
 // Animação focada no layout e no surgimento dos elementos da Home e Soluções
+console.log("Script de animações e digitação carregado com sucesso!");
+
 const elementosAnimar = document.querySelectorAll('.solucao-card, .titulo, section, .main-footer');
 
 function animarScroll() {
@@ -16,14 +18,14 @@ function animarScroll() {
     });
 }
 
-// deixa tudo invisível e um pouquinho deslocado para baixo
+// Deixa tudo invisível e um pouquinho deslocado para baixo
 // para o efeito de "subir" funcionar na hora que a pessoa rolar a página
 elementosAnimar.forEach((el) => {
     el.style.opacity = "0";
     el.style.transform = "translateY(30px)";
 });
 
-// conforme a rolagem da página e carrega o efeito inicial
+// Conforme a rolagem da página e carrega o efeito inicial
 window.addEventListener('scroll', animarScroll);
 window.addEventListener('load', animarScroll);
 
