@@ -4,9 +4,6 @@
     font-weight: 700;
     font-style: normal;
 }
-h1 {
-    font-family: "EB Garamond", serif;
-}
 /* RESET */
 * {
     margin: 0;
@@ -41,9 +38,9 @@ nav {
 
 nav h1 {
     color: #013f4a;
-    font-size: 30px;
+    font-size: 23px;
     font-weight: bold;
-    border-radius: 80px;   
+    border-radius: 80px; 
 }
 
 nav ul {
@@ -79,6 +76,7 @@ nav a:hover {
     font-weight: bold;
     color: #013f4a;
     justify-content: center;
+    
 }
 
 .hero p {
@@ -225,7 +223,7 @@ body::before {
     position: absolute;
     bottom: 30px;
     left: 30px;
-    background: linear-gradient(to right,#013f4a, #62b59f); 
+   background: linear-gradient(to right, #07132c, #38a868);
     color:whitesmoke;
     padding: 12px 25px;
     border-radius: 80px;
@@ -246,7 +244,7 @@ body::before {
 }
 /* RODAPÉ PRINCIPAL */
 .main-footer {
-    background: #013f4a; 
+    background: linear-gradient(to right, #07132c, #38a868);
     color: whitesmoke;
     padding: 40px 20px 20px 20px;
     margin-top: 20px;
