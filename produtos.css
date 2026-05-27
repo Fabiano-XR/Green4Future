@@ -126,7 +126,7 @@ nav a:hover {
     display: flex;
     flex-direction: column; /* Empilha os elementos um embaixo do outro */
     gap: 15px; /* Cria um espaçamento igual entre cada campo */
-    }
+}
 /* Estilo dos campos de texto */
 .container form input[type="email"],
 .container form input[type="tel"],
