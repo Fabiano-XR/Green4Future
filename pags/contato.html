@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato ☕︎</title>
+    <title>Contato</title>
 <!-- fontes usadas no site -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,20 +60,20 @@
 
         <section class="email">
             <h1>Nos Mande uma Mensagem</h1>
-            <form action="">
+            <form id="formContato" action="">
                     <div>
                         <label class="texto">Seu Nome</label>
-                        <input type="text" placeholder="Nome Completo" id="nome">
+                        <input type="text" placeholder="Nome Completo" id="nome" required>
                     </div>
 
                     <div>
                         <label class="texto">Seu Email</label >
-                        <input type="email" placeholder="Ex.: email@email.com" id="email">
+                        <input type="email" placeholder="Ex.: email@email.com" id="email" required>
                     </div>
 
                     <div>
                         <label class="texto">Mensagem</label>
-                        <textarea name="" id="mensagem" placeholder="Digite aqui sua mensagem... (Maximo de 500 caracteres.)"></textarea>
+                        <textarea name="" id="mensagem" placeholder="Digite aqui sua mensagem... (Maximo de 500 caracteres.)" required></textarea>
                         <button><b>ENVIAR MENSAGEM</b></button>
                     </div>
             </form>
@@ -90,7 +90,7 @@
         
             <div class="footer_contact">
                 <h5><strong>Contato</strong></h5>
-                <p>Email: greenfuture@gmail.com</p>
+                <p>Email: contato@Green4Future.com.br</p>
                 <p>Telefone: 4002-8922</p>
                 <p>WhatsApp: +55 (11) 94002-8922</p>
             </div>
@@ -111,5 +111,6 @@
             <p>&copy; 2026 Green4Future - Todos os direitos reservados.</p>
         </div>
     </footer>
+    <script src="../js/contato.js"></script>
 </body>
 </html>

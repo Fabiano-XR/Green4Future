@@ -25,12 +25,11 @@ nav { /*Aba de navegação para os outros sites*/
     justify-content: space-between;
     align-items: center;
 }
-/*nav h1 { Nome do site
-     color: #27e9b5;
-    font-size: 30px;
-    font-weight: bold;
-    border-radius: 80px;
-}*/
+nav h1 { /* Nome do site */
+    color: #051824;
+    font-size: 32px;
+    font-weight: 800;
+}
 nav ul { /*organizar os links*/
     display: flex;
     gap: 20px;
